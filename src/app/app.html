@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>STUDIO.DEV | ARCHIE WATSON-IRVINE</title>
+    <title>ARCHIE WATSON IRVINE</title>
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <!-- Google Fonts -->
@@ -94,6 +94,7 @@
         .border-t-hairline { border-top-width: 1px; border-top-color: rgba(153, 144, 124, 0.3); }
         .border-b-hairline { border-bottom-width: 1px; border-bottom-color: rgba(153, 144, 124, 0.3); }
         .border-l-hairline { border-left-width: 1px; border-left-color: rgba(153, 144, 124, 0.3); }
+        html, body { height: 100%; overflow-x: hidden; }
         html { scroll-padding-top: 100px; }
     </style>
 </head>
@@ -102,10 +103,10 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-primary/20">
     <div class="flex justify-between items-center w-full px-5 md:px-16 py-6 max-w-[1280px] mx-auto">
-        <a class="font-display text-2xl italic tracking-tight text-primary" href="#">Archie Watson Irvine</a>
+        <a class="font-display text-2xl italic tracking-tight text-primary" href="/">Archie Watson Irvine</a>
         <div class="hidden md:flex gap-12 font-code text-xs uppercase tracking-widest">
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#craft">Craft</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#chronicle">Chronicle</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#profile">Profile</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#experience">Experience</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#inquiry">Inquiry</a>
         </div>
         <button class="md:hidden text-primary">
@@ -115,132 +116,108 @@
 </nav>
 
 <!-- Main Content Canvas -->
-<main class="flex-grow pt-32 pb-32 px-5 md:px-16 max-w-[1280px] mx-auto w-full">
+<main class="flex-grow pt-24 px-5 md:px-16 max-w-[1280px] mx-auto w-full flex flex-col justify-between">
     
-    <!-- Hero Section -->
-    <section class="relative min-h-[70vh] flex flex-col justify-center items-center mb-32 overflow-hidden rounded-xl">
-        <div class="absolute inset-0 z-0 opacity-50">
+    <!-- Hero Section: Adjusted to perfectly bridge screen spaces smoothly -->
+    <section class="relative min-h-[calc(100vh-8rem)] flex flex-col justify-center items-center my-auto overflow-hidden rounded-xl">
+        <div class="absolute inset-0 z-0 opacity-40">
             <img src="largeImage.png" alt="Workspace Background" class="w-full h-full object-cover">
         </div>
         <div class="w-full max-w-4xl flex flex-col items-center text-center gap-6 relative px-4">
             <h1 class="font-display text-5xl md:text-7xl text-primary drop-shadow-lg">Archie Watson Irvine</h1>
             <div class="w-24 border-t border-primary/40"></div>
             <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-                Software Developer with 2+ years of experience crafting high-performance digital systems. Specialising in .NET Frameworks.
+                Software Developer crafting high-performance digital systems. Specialising in modern web, mobile engineering ecosystems, and building intelligent automation workflows.
             </p>
         </div>
     </section>
 
-    <!-- Section 1: Technique (Craft) -->
-    <section class="mb-32" id="craft">
+    <section class="py-24 border-t-hairline" id="profile">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <!-- Left Column: Title and Portrait Image -->
             <div class="col-span-1 md:col-span-3 flex flex-col justify-between">
                 <div>
-                    <h2 class="font-display text-3xl text-primary mb-2">Technique</h2>
-                    <span class="font-code text-xs tracking-widest text-on-surface-variant uppercase">Curated Mediums</span>
+                    <h2 class="font-display text-3xl text-primary mb-2">Profile</h2>
+                    <span class="font-code text-xs tracking-widest text-on-surface-variant uppercase">My History</span>
                 </div>
                 <div class="mt-12 hidden md:block opacity-80">
                     <img alt="Original portrait of Archie Watson Irvine" class="w-full aspect-square object-cover border border-primary/20 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPQzvWC91LXQnLF1Dq-x4a3huB0VTt6uj1SJhY3ttS2Y-FxuJCNH4cGMkcHX7CQu9cBkuHYExpmcVQ-a3aUq6foPA10Mt1E1nhg39qm--LsRFu5LA6Ka8GTncWH4LvieoNhtyp-xcrH0v8iNTMfs_fWJ3CcpNPU-C7uHYrYU1-MIj2Hzn5HLck3dIc8sLZdD7I07xF13VyaVMHCcD_amMp5jc_klva0rJ1c5I3PpkwCD7sd19QQOFsRW0CoERUT5dV7w">
                 </div>
             </div>
-            <div class="col-span-1 md:col-span-9">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-primary/10 border border-hairline">
-                    <!-- Tech Item 1 -->
-                    <div class="bg-surface-container-lowest p-8 flex flex-col justify-between aspect-square hover:bg-surface-container-low transition-colors duration-300">
-                        <div class="mb-4 overflow-hidden border border-primary/10 h-32">
-                            <img alt="Cross-platform architecture" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLOfrNtUJAaPwf-TKI2YYSBmo-Sk0YhSl3mEcLlspQYlIQNc7fSk893-UMCd21vGCTdThmlHONZT-_CT-slNcpWkZuvAzY9ljJgOYJtatJx24wJ2jrSY-NzlJid9-5SK-U9MZGKv7fCsjviXGHz2VlrJ34pYMHBKEQL_blZ8cNsHSiHnK376pFmx6uJ_lSmBs4oc-gt8kTbl-cSBF7R9YhRzNLUr8oD68Ly_q7af7lIS1TjJOpGi4D">
-                        </div>
-                        <div>
-                            <span class="font-code text-xs text-primary block mb-1">01</span>
-                            <h3 class="font-display text-xl text-on-surface mb-1">.NET MAUI</h3>
-                            <p class="font-body text-sm text-on-surface-variant">Cross-platform architecture.</p>
-                        </div>
-                    </div>
-                    <!-- Tech Item 2 -->
-                    <div class="bg-surface-container-lowest p-8 flex flex-col justify-between aspect-square hover:bg-surface-container-low transition-colors duration-300">
-                        <div class="mb-4 overflow-hidden border border-primary/10 h-32">
-                            <img alt="Native mobile engineering" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW63H1gDFFaHviyFdOrDojYQlgID5z4B6DtyDo4Rd6uzwTeC7rwr11JRJ75Y6ZXGVEz_A65NZnoG6nBQnUKSQTCL2kg_PPyDfnBv_poEg2Vvu98Y4NeexKpFlLeLMfSfeLFdpu5vxS379w11WnijrGFbybIkG2PFbkvI1boQCDTUci6ImAzOm5KOJOZH51Ru4vo_vPxRp2aqLBBPpliubegaV9-smY4mqEKlutZt3yFaeTh1_1wrfq">
-                        </div>
-                        <div>
-                            <span class="font-code text-xs text-primary block mb-1">02</span>
-                            <h3 class="font-display text-xl text-on-surface mb-1">Xamarin</h3>
-                            <p class="font-body text-sm text-on-surface-variant">Native mobile engineering.</p>
-                        </div>
-                    </div>
-                    <!-- Tech Item 3 -->
-                    <div class="bg-surface-container-lowest p-8 flex flex-col justify-between aspect-square hover:bg-surface-container-low transition-colors duration-300">
-                        <div class="mb-4 overflow-hidden border border-primary/10 h-32">
-                            <img alt="System communication design" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6zqbiEgtICXmqjAclfl_rU5MoSwXO5PnceE87MxPFSE32fb3xgddd85_QpK4AtnXSGr48OKraexQOYsvZ38hYdi7qxulWGtUUTDLFZvK47Jpqlfsd8n7TAZJj4GnzVDU4T7Kg7RJW9zsTNjq1w1cnErai-UbqTHq1sxkrKwkJJ6iPk9VJ4Ij2LtoNX98eN4ON3-Nux5U3HZOykjocDXLWt6nSUjfAsAciFf8n6LrTC6pSSo2HKNUi">
-                        </div>
-                        <div>
-                            <span class="font-code text-xs text-primary block mb-1">03</span>
-                            <h3 class="font-display text-xl text-on-surface mb-1">REST APIs</h3>
-                            <p class="font-body text-sm text-on-surface-variant">System communication design.</p>
-                        </div>
-                    </div>
-                    <!-- Tech Item 4 -->
-                    <div class="bg-surface-container-lowest p-8 flex flex-col justify-between aspect-square hover:bg-surface-container-low transition-colors duration-300">
-                        <div class="mb-4 overflow-hidden border border-primary/10 h-32">
-                            <img alt="Modern client interfaces" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy6z6MoBr9R1uEtiA6TYdZHLY71ns05ytMSHj_9m6tJMQilY_vrMZaFG7-cKux_TWAOEJ1Y3F0H7uGyrxdgO0A8F1e7X6pvAGKD_HtMqThvgdVmSrEdNVR0uC-wh_L0Sl0N0exzPJkWmttXof5skvJKMFPvbIMIV9A_VysT586MSN63dopbKhbCA7_RB7BZq6bY4jztxcU9zjmO9UCNsG8tIlLrnqj2OjZDVCecFtXY3pFRCvnPzey">
-                        </div>
-                        <div>
-                            <span class="font-code text-xs text-primary block mb-1">04</span>
-                            <h3 class="font-display text-xl text-on-surface mb-1">Angular 21+</h3>
-                            <p class="font-body text-sm text-on-surface-variant">Modern client interfaces.</p>
-                        </div>
-                    </div>
+            
+            <!-- Right Column: Narrative Content -->
+            <div class="col-span-1 md:col-span-9 flex flex-col justify-center">
+                <div class="space-y-6 max-w-3xl border-l border-hairline pl-8 md:pl-16 relative">
+                    <div class="absolute -left-[5px] top-3 w-2 h-2 bg-primary rounded-full"></div>
+                    
+                    <h3 class="font-display text-2xl text-on-surface">History &amp; What's next</h3>
+                    
+                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
+                        Originally from Brighton, I am currently living in Worthing with my sights set on moving to London soon. My journey into software development started long before professional frameworks—I’ve had a deep passion for software development from a young age, tinkering with logic and building my very first programs using Scratch.
+                    </p>
+                    
+                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
+                        Lately, that passion has translated into high-impact, real-world solutions. I've had the privilege of working with various NHS trusts up and down the UK to deliver robust and user-friendly systems for managing inventory, ensuring critical stock management runs flawlessly across their facilities.
+                    </p>
+                    
+                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
+                        Whether it is supporting vital healthcare infrastructure, modernising legacy architecture, or crafting smooth digital interfaces, I'm driven by solving complex systems logic across mobile and web platforms.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 2: Chronicle -->
-    <section class="mb-32" id="chronicle">
+    <section class="py-24 border-t-hairline" id="experience">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
             <div class="col-span-1 md:col-span-3">
-                <h2 class="font-display text-3xl text-primary mb-2">Chronicle</h2>
+                <h2 class="font-display text-3xl text-primary mb-2">Experience</h2>
                 <span class="font-code text-xs tracking-widest text-on-surface-variant uppercase">Professional Record</span>
             </div>
             <div class="col-span-1 md:col-span-9 border-l-hairline pl-8 md:pl-16 space-y-12 relative">
-                <!-- Timeline Item 1 -->
                 <div class="relative">
                     <div class="absolute -left-[37px] md:-left-[69px] top-2 w-2 h-2 bg-primary rounded-full"></div>
                     <span class="font-code text-xs text-primary block mb-1">2022 — PRESENT</span>
                     <h3 class="font-display text-2xl text-on-surface">Software Developer</h3>
-                    <p class="font-body text-base text-on-surface-variant">Enterprise Solutions Inc.</p>
+                    <p class="font-body text-base text-primary mb-3">Elcom</p>
+                    <p class="font-body text-base text-on-surface-variant max-w-2xl leading-relaxed">
+                        Leading mobile development by building features and modernising legacy frameworks using .NET MAUI and Xamarin. I keep things running smoothly behind the scenes with RESTful APIs, WCF, and low-level SQL processing, while jumping over to help the Angular team whenever they need an extra hand. In addition, I actively integrate modern AI tools within my engineering workflow to accelerate development pipelines and consistently maintain bleeding-edge technology standards.
+                    </p>
                 </div>
-                <!-- Timeline Item 2 -->
                 <div class="relative">
                     <div class="absolute -left-[37px] md:-left-[69px] top-2 w-2 h-2 bg-background border border-primary rounded-full"></div>
-                    <span class="font-code text-xs text-on-surface-variant block mb-1">2021 — 2022</span>
-                    <h3 class="font-display text-2xl text-on-surface">Junior Developer Intern</h3>
-                    <p class="font-body text-base text-on-surface-variant">Tech Innovations Lab.</p>
+                    <span class="font-code text-xs text-primary block mb-1">2016 — 2020 - Part-time</span>
+                    <h3 class="font-display text-2xl text-on-surface">Intern/Junior Software Developer</h3>
+                    <p class="font-body text-base text-primary mb-3">Bionic Media</p>
+                    <p class="font-body text-base text-on-surface-variant max-w-2xl leading-relaxed">
+                        Focused on building and maintaining business-critical ASP.NET web applications with clean, modern interfaces. I also took charge of system modernisation, translating complex legacy VB.NET desktop applications into optimised, maintainable C# code.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 3: Foundation -->
-    <section class="mb-32" id="exhibition">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 border-t-hairline pt-16">
+    <section class="py-24 border-t-hairline" id="education">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
             <div class="col-span-1 md:col-span-3">
-                <h2 class="font-display text-3xl text-primary">Foundation</h2>
+                <h2 class="font-display text-3xl text-primary">Education</h2>
             </div>
             <div class="col-span-1 md:col-span-9">
                 <div class="bg-surface-container-low p-8 border border-hairline rounded-lg">
                     <h3 class="font-display text-2xl text-primary mb-1">BEng Software Engineering</h3>
-                    <p class="font-body text-base text-on-surface-variant">University of Technology &amp; Science</p>
+                    <p class="font-body text-base text-on-surface-variant">Sheffield University</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Section 4: Inquiry -->
-    <section id="inquiry" class="py-12">
+    <section id="inquiry" class="py-24 border-t-hairline">
         <div class="w-full flex flex-col items-center text-center">
             <h2 class="font-display text-4xl text-primary mb-4">Inquiry</h2>
             <p class="font-body text-base text-on-surface-variant max-w-lg mb-8">
-                Available for architectural discussions and software engineering commissions.
+                Available for mobile app development and web application development. Reach out to discuss your project or collaboration opportunities.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 font-code text-sm">
                 <a class="border-b border-primary/30 pb-1 hover:border-primary transition-colors text-primary" href="mailto:Archie.watsonirvine@gmail.com">Archie.watsonirvine@gmail.com</a>
@@ -254,7 +231,7 @@
 <!-- Footer -->
 <footer class="w-full py-12 border-t border-primary/10 bg-background mt-auto">
     <div class="max-w-[1280px] mx-auto px-5 md:px-16 text-center md:text-left text-xs font-code text-on-surface-variant/60">
-        &copy; 2026 STUDIO.DEV. All rights reserved.
+        &copy; 2026 archiewatsonirvine.com. All rights reserved.
     </div>
 </footer>
 
