@@ -107,7 +107,7 @@
         <div class="hidden md:flex gap-12 font-code text-xs uppercase tracking-widest">
             <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#profile">Profile</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#experience">Experience</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#enquiry">Enquiry</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#enquiry">Inquiry</a>
         </div>
         <button class="md:hidden text-primary">
             <span class="material-symbols-outlined">menu</span>
@@ -120,9 +120,8 @@
     
     <!-- Hero Section: Adjusted to perfectly bridge screen spaces smoothly -->
     <section class="relative min-h-[calc(100vh-8rem)] flex flex-col justify-center items-center my-auto overflow-hidden rounded-xl">
-        <div class="absolute inset-0 z-0 opacity-40">
-            <img src="largeImage.png" alt="Workspace Background" class="w-full h-full object-cover">
-        </div>
+        <div class="absolute inset-0 z-0" style="background-image: radial-gradient(circle, rgba(242,202,80,0.18) 1px, transparent 1px); background-size: 32px 32px;"></div>
+        <div class="absolute inset-0 z-0" style="background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(242,202,80,0.07) 0%, transparent 70%);"></div>
         <div class="w-full max-w-4xl flex flex-col items-center text-center gap-6 relative px-4">
             <h1 class="font-display text-5xl md:text-7xl text-primary drop-shadow-lg">Archie Watson Irvine</h1>
             <div class="w-24 border-t border-primary/40"></div>
@@ -179,7 +178,7 @@
                     <div class="absolute -left-[37px] md:-left-[69px] top-2 w-2 h-2 bg-primary rounded-full"></div>
                     <span class="font-code text-xs text-primary block mb-1">2022 — PRESENT</span>
                     <h3 class="font-display text-2xl text-on-surface">Software Developer</h3>
-                    <p class="font-body text-base text-primary mb-3">Elcom</p>
+                    <p class="font-body text-base text-primary mb-3"><a href="https://elcom.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">Elcom</a></p>
                     <p class="font-body text-base text-on-surface-variant max-w-2xl leading-relaxed">
                         Leading mobile development by building features and modernising legacy frameworks using .NET MAUI and Xamarin. I keep things running smoothly behind the scenes with RESTful APIs, WCF, and low-level SQL processing, while jumping over to help the Angular team whenever they need an extra hand. In addition, I actively integrate modern AI tools within my engineering workflow to accelerate development pipelines and consistently maintain bleeding-edge technology standards.
                     </p>
@@ -188,7 +187,7 @@
                     <div class="absolute -left-[37px] md:-left-[69px] top-2 w-2 h-2 bg-background border border-primary rounded-full"></div>
                     <span class="font-code text-xs text-primary block mb-1">2016 — 2020 - Part-time</span>
                     <h3 class="font-display text-2xl text-on-surface">Intern/Junior Software Developer</h3>
-                    <p class="font-body text-base text-primary mb-3">Bionic Media</p>
+                    <p class="font-body text-base text-primary mb-3"><a href="https://www.bionicmedia.co.uk/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">Bionic Media</a></p>
                     <p class="font-body text-base text-on-surface-variant max-w-2xl leading-relaxed">
                         Focused on building and maintaining business-critical ASP.NET web applications with clean, modern interfaces. I also took charge of system modernisation, translating complex legacy VB.NET desktop applications into optimised, maintainable C# code.
                     </p>
@@ -213,11 +212,11 @@
     </section>
 
     <!-- Section 4: Inquiry -->
-    <section id="Enquiry" class="py-24 border-t-hairline">
+    <section id="enquiry" class="py-24 border-t-hairline">
         <div class="w-full flex flex-col items-center text-center">
-            <h2 class="font-display text-4xl text-primary mb-4">Enquiry</h2>
+            <h2 class="font-display text-4xl text-primary mb-4">Inquiry</h2>
             <p class="font-body text-base text-on-surface-variant max-w-lg mb-8">
-                Available for mobile app development and web application development. Reach out to discuss your project or collaboration opportunities.
+                Available for mobile app development and web application development. Get in touch to discuss your project or collaboration opportunities.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 font-code text-sm">
                 <app-email-obfuscator class="border-b border-primary/30 pb-1 hover:border-primary transition-colors text-primary" user="archie.watsonirvine" domain="gmail.com"></app-email-obfuscator>
