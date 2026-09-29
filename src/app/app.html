@@ -100,9 +100,15 @@
 </head>
 <body class="bg-background text-on-surface font-body antialiased min-h-screen flex flex-col">
 
+<!-- Page-wide background: dot grid + soft gold glow -->
+<div class="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(242,202,80,0.18) 1px, transparent 1px); background-size: 32px 32px;"></div>
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(242,202,80,0.07) 0%, transparent 70%);"></div>
+</div>
+
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-primary/20">
-    <div class="flex justify-between items-center w-full px-5 md:px-16 py-6 max-w-[1280px] mx-auto">
+    <div class="flex justify-between items-center w-full px-5 md:px-16 py-6 mx-auto">
         <a class="font-display text-2xl italic tracking-tight text-primary" href="/">Archie Watson Irvine</a>
         <div class="hidden md:flex gap-12 font-code text-xs uppercase tracking-widest">
             <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#profile">Profile</a>
@@ -116,51 +122,48 @@
 </nav>
 
 <!-- Main Content Canvas -->
-<main class="flex-grow pt-24 px-5 md:px-16 max-w-[1280px] mx-auto w-full flex flex-col justify-between">
+<main class="relative z-10 flex-grow pt-24 px-5 md:px-16 w-full flex flex-col justify-between">
     
     <!-- Hero Section: Adjusted to perfectly bridge screen spaces smoothly -->
     <section class="relative min-h-[calc(100vh-8rem)] flex flex-col justify-center items-center my-auto overflow-hidden rounded-xl">
-        <div class="absolute inset-0 z-0" style="background-image: radial-gradient(circle, rgba(242,202,80,0.18) 1px, transparent 1px); background-size: 32px 32px;"></div>
-        <div class="absolute inset-0 z-0" style="background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(242,202,80,0.07) 0%, transparent 70%);"></div>
         <div class="w-full max-w-4xl flex flex-col items-center text-center gap-6 relative px-4">
             <h1 class="font-display text-5xl md:text-7xl text-primary drop-shadow-lg">Archie Watson Irvine</h1>
             <div class="w-24 border-t border-primary/40"></div>
             <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">
-                Software Developer crafting high-performance digital systems. Specialising in modern web, mobile engineering ecosystems, and building intelligent automation workflows.
+                .NET Engineer specialising in C#, .NET MAUI and full-stack development. I build and support the mobile and backend software used across 20+ NHS Trusts.
             </p>
         </div>
     </section>
 
-    <section class="py-24 border-t-hairline" id="profile">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+    <!-- Profile: more vertical room, wider text column, larger type and looser spacing -->
+    <section class="py-32 md:py-44 border-t-hairline" id="profile">
+        <div class="flex flex-col items-center text-center gap-10">
             <!-- Left Column: Title and Portrait Image -->
-            <div class="col-span-1 md:col-span-3 flex flex-col justify-between">
+            <div class="flex flex-col items-center">
                 <div>
-                    <h2 class="font-display text-3xl text-primary mb-2">Profile</h2>
-                    <span class="font-code text-xs tracking-widest text-on-surface-variant uppercase">My History</span>
+                    <h2 class="font-display text-4xl md:text-5xl text-primary mb-3">Profile</h2>
+                    <span class="font-code text-sm tracking-widest text-on-surface-variant uppercase">My History</span>
                 </div>
-                <div class="mt-12 hidden md:block opacity-80">
+                <div class="mt-10 hidden md:block w-64 opacity-80">
                     <img alt="Original portrait of Archie Watson Irvine" class="w-full aspect-square object-cover border border-primary/20 transition-all duration-500" src="/MeinGreece.jpg">
                 </div>
             </div>
             
             <!-- Right Column: Narrative Content -->
-            <div class="col-span-1 md:col-span-9 flex flex-col justify-center">
-                <div class="space-y-6 max-w-3xl border-l border-hairline pl-8 md:pl-16 relative">
-                    <div class="absolute -left-[5px] top-3 w-2 h-2 bg-primary rounded-full"></div>
+            <div class="w-full flex flex-col items-center">
+                <div class="space-y-10 max-w-4xl mx-auto px-2 md:px-16 py-4 md:py-8 relative">
+                    <h3 class="font-display text-3xl md:text-4xl text-on-surface">History &amp; What's next</h3>
                     
-                    <h3 class="font-display text-2xl text-on-surface">History &amp; What's next</h3>
-                    
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                        Originally from Brighton, I now call Leyton, London home. My journey into software development started long before professional frameworks I've always had a passion for software development from a young age, creating little simple programs using Scratch, Kids Ruby, moving to more professional languages like C# & Angular.
+                    <p class="font-body text-base md:text-lg text-on-surface-variant leading-loose">
+                        Originally from Brighton, I now call Leyton, London home. I've loved software development since I was young, starting with simple programs in Scratch and Kids Ruby before moving on to C# and Angular.
                     </p>
                     
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                        I now have the opportunity to apply my skills in a professional setting as a Full-Stack Software Developer, working with various NHS Trusts across the UK to ensure stock management runs flawlessly throughout their facilities.
+                    <p class="font-body text-base md:text-lg text-on-surface-variant leading-loose">
+                        I'm now a Full-Stack Software Developer at Elcom, with over two years of commercial experience across web, API and mobile platforms. I develop and support software used across 20+ NHS Trusts, helping keep stock management running smoothly in their facilities.
                     </p>
                     
-                    <p class="font-body text-base text-on-surface-variant leading-relaxed">
-                        Whether it is supporting vital healthcare infrastructure, modernising legacy architecture, or crafting smooth digital interfaces, I'm driven by solving complex systems logic across mobile and web platforms using .NET MAUI, C#, Angular, and SQL.
+                    <p class="font-body text-base md:text-lg text-on-surface-variant leading-loose">
+                        From API development and authentication to production support and modernising legacy platforms, I enjoy turning operational needs into robust software, using .NET MAUI, C#, ASP.NET Core, Angular and SQL.
                     </p>
                 </div>
             </div>
@@ -168,28 +171,28 @@
     </section>
 
     <section class="py-24 border-t-hairline" id="experience">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div class="col-span-1 md:col-span-3">
-                <h2 class="font-display text-3xl text-primary mb-2">Experience</h2>
-                <span class="font-code text-xs tracking-widest text-on-surface-variant uppercase">Professional Record</span>
+        <div class="flex flex-col items-center text-center gap-10">
+            <div class="text-center">
+                <h2 class="font-display text-4xl md:text-5xl text-primary mb-3">Experience</h2>
+                <span class="font-code text-sm tracking-widest text-on-surface-variant uppercase">Professional Record</span>
             </div>
-            <div class="col-span-1 md:col-span-9 border-l-hairline pl-8 md:pl-16 space-y-12 relative">
+            <div class="w-full max-w-4xl mx-auto border-l-hairline pl-8 md:pl-16 space-y-12 relative text-left">
                 <div class="relative">
                     <div class="absolute -left-[37px] md:-left-[69px] top-2 w-2 h-2 bg-primary rounded-full"></div>
-                    <span class="font-code text-xs text-primary block mb-1">2022 — PRESENT</span>
-                    <h3 class="font-display text-2xl text-on-surface">Software Developer</h3>
-                    <p class="font-body text-base text-primary mb-3"><a href="https://elcom.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">Elcom</a></p>
-                    <p class="font-body text-base text-on-surface-variant max-w-2xl leading-relaxed">
-                        Leading mobile development by building features and modernising legacy frameworks using .NET MAUI and Xamarin. I keep things running smoothly behind the scenes with RESTful APIs, WCF, and low-level SQL processing, while jumping over to help the Angular team whenever they need an extra hand. In addition, I actively integrate modern AI tools within my engineering workflow to accelerate development pipelines and consistently maintain bleeding-edge technology standards.
+                    <span class="font-code text-sm text-primary block mb-2">MARCH 2024 — PRESENT</span>
+                    <h3 class="font-display text-3xl md:text-4xl text-on-surface">Software Developer</h3>
+                    <p class="font-body text-base md:text-lg text-primary mb-4"><a href="https://elcom.com/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">Elcom</a></p>
+                    <p class="font-body text-base md:text-lg text-on-surface-variant max-w-4xl leading-loose">
+                        Lead developer for the C#/.NET MAUI and Xamarin mobile applications used across 20+ NHS Trusts, covering development, testing and releases. I design and test .NET 10 REST APIs, and led their migration from legacy WCF, introducing JWT authentication and Keycloak SSO. I also build Angular (TypeScript) features alongside the front-end team, provide Level-3 developer support for NHS Trusts, and use Docker and GitLab CI/CD to keep deployments and verification pipelines reliable. AI tools such as Claude, Claude Code and Gemini are part of my everyday workflow.
                     </p>
                 </div>
                 <div class="relative">
                     <div class="absolute -left-[37px] md:-left-[69px] top-2 w-2 h-2 bg-background border border-primary rounded-full"></div>
-                    <span class="font-code text-xs text-primary block mb-1">2016 — 2020 - Part-time</span>
-                    <h3 class="font-display text-2xl text-on-surface">Intern/Junior Software Developer</h3>
-                    <p class="font-body text-base text-primary mb-3"><a href="https://www.bionicmedia.co.uk/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">Bionic Media</a></p>
-                    <p class="font-body text-base text-on-surface-variant max-w-2xl leading-relaxed">
-                        Focused on building and maintaining business-critical ASP.NET web applications with clean, modern interfaces. I also took charge of system modernisation, translating complex legacy VB.NET desktop applications into optimised, maintainable C# code.
+                    <span class="font-code text-sm text-primary block mb-2">2016 — 2020 - Part-time</span>
+                    <h3 class="font-display text-3xl md:text-4xl text-on-surface">Junior Software Engineer</h3>
+                    <p class="font-body text-base md:text-lg text-primary mb-4"><a href="https://www.bionicmedia.co.uk/" target="_blank" rel="noopener noreferrer" class="hover:opacity-75 transition-opacity">Bionic Media</a></p>
+                    <p class="font-body text-base md:text-lg text-on-surface-variant max-w-4xl leading-loose">
+                        Worked part-time alongside my studies, contributing to the migration of legacy VB.NET applications to C# and developing and debugging features in a live production codebase. This gave me a solid foundation in commercial software development and supporting production systems.
                     </p>
                 </div>
             </div>
@@ -198,14 +201,15 @@
 
     <!-- Section 3: Foundation -->
     <section class="py-24 border-t-hairline" id="education">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div class="col-span-1 md:col-span-3">
-                <h2 class="font-display text-3xl text-primary">Education</h2>
+        <div class="flex flex-col items-center text-center gap-10">
+            <div class="text-center">
+                <h2 class="font-display text-4xl md:text-5xl text-primary">Education</h2>
             </div>
-            <div class="col-span-1 md:col-span-9">
+            <div class="w-full max-w-4xl mx-auto">
                 <div class="bg-surface-container-low p-8 border border-hairline rounded-lg">
                     <h3 class="font-display text-2xl text-primary mb-1">BEng Software Engineering</h3>
-                    <p class="font-body text-base text-on-surface-variant">Sheffield Hallam University</p>
+                    <p class="font-body text-base text-on-surface-variant">Sheffield Hallam University, 2020 – 2024</p>
+                    <p class="font-body text-base text-on-surface-variant mt-4">Certified RFID Technical Associate</p>
                 </div>
             </div>
         </div>
@@ -214,7 +218,7 @@
     <!-- Section 4: Inquiry -->
     <section id="enquiry" class="py-24 border-t-hairline">
         <div class="w-full flex flex-col items-center text-center">
-            <h2 class="font-display text-4xl text-primary mb-4">Inquiry</h2>
+            <h2 class="font-display text-4xl md:text-5xl text-primary mb-4">Inquiry</h2>
             <p class="font-body text-base text-on-surface-variant max-w-lg mb-8">
                 Available for mobile app development and web application development. Get in touch to discuss your project or collaboration opportunities.
             </p>
@@ -228,8 +232,8 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full py-12 border-t border-primary/10 bg-background mt-auto">
-    <div class="max-w-[1280px] mx-auto px-5 md:px-16 text-center md:text-left text-xs font-code text-on-surface-variant/60">
+<footer class="relative z-10 w-full py-12 border-t border-primary/10 mt-auto">
+    <div class="mx-auto px-5 md:px-16 text-center text-xs font-code text-on-surface-variant/60">
         &copy; 2026 archiewatsonirvine.com. All rights reserved.
     </div>
 </footer>
